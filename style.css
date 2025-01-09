@@ -7,7 +7,8 @@
 }
 
 body {
-    background: #123f41;
+    background: #081b29;
+    color: #ededed;
 }
 
 .header {
@@ -16,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: red;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +40,98 @@ body {
     transition: .3s;
 }
 
-.navbar a:hover {
-    color: black;
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
 }
+
+.home {
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.home-content h3 {
+    
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+}
+
+.home-content .button-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.button-box a {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 0;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+.button-box a:hover {
+    color: #00abf0;
+}
+
+.button-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.button-box a:nth-child(2):hover {
+    color: #081b29;
+}
+.button-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+.button-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.button-box a:hover::before {
+    width: 100%;
+}
+
+
+
 
